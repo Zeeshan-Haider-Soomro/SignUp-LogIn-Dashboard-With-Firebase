@@ -7,6 +7,7 @@ const [name, userEmail, userPaasword, gender] = formField
 let signUpBtn = document.getElementById("signUpBtn")
 const signUp = () =>{
     event.preventDefault()
+    signUpBtn.innerText = "Loading..."
     if(name.value.trim() === "" && userEmail.value.trim() === "" && userPaasword.value.trim() === "" && gender.value.trim() === ""){
       Toastify({
         text: "All Fields are Required", 
@@ -15,7 +16,6 @@ const signUp = () =>{
       }).showToast();
     }
     else{
-      signUpBtn.innerText = "Loading..."
       createUserWithEmailAndPassword(auth, userEmail.value, userPaasword.value)
       .then((userCredential) => {
       signUpBtn.innerText = "Signed up"
@@ -36,8 +36,8 @@ const signUp = () =>{
           position: "center"
         }).showToast();
       });
-      signUpBtn.innerText = "Continue"
     }
+    signUpBtn.innerText = "Continue"
 
 }
 
@@ -56,4 +56,6 @@ const signuppages = () =>{
 }
 
 signuppage.addEventListener("click", signuppages)
+
+
 

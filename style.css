@@ -77,3 +77,13 @@ a:hover{
 p{
     color: black;
 }
+
+.banner{
+    background-image: url(./images/batman-blue-glowing-eyes-dark-gif-preview-desktop-wallpaper.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: aliceblue;
+    margin-top: 55px;
+}
